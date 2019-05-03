@@ -1,21 +1,35 @@
 <?php
-    $age = 21;
-    echo $age;
-    echo '<br/>';
+    $A = 5;
+    $b = 7;
+    echo isset($a);
+    echo '<br />';
+    echo isset($b);
 
-    $s = "Мій вік $age років";
-    echo $s;
-    echo '<br/>';
+    $x = 15;
+    echo '<br />';
+    echo gettype($x);
+    $x = (double) $x;
+    echo '<br />';
+    echo gettype($x);
+    echo '<br />';
 
-    $d = 2.1;
-    echo $d;
-    echo '<br/>';
+    $str = 'Hello';
+    echo 'Переменная str - это string? : ';
+    echo is_string($str);
+    echo '<br />';
 
-    $bool = true;
-    $bool_1 = false;
-    echo "true: $bool; false: $bool_1";
-    echo '<br/>';
+    echo ((int) $str);
+    echo '<br />';
+    $str_number = '12345';
+    echo ((int) $str_number);
+    echo '<br />';
+    echo gettype($str_number);
+    echo '<br />';
+    echo is_numeric($str_number);
 
-    $obj = null;
-    echo "NULL: $obj";
+    echo '<br />';
+    echo isset($x);
+    echo '<br />';
+    unset($x);
+    echo isset($x);
 ?>
