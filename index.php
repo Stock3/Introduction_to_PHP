@@ -1,35 +1,23 @@
 <?php
-    $A = 5;
+    /* Жёсткие ссылки */
+    $a = 10;
+    $b =& $a;
+    $a = 5;
+    echo $b;
+    echo '<br />';
     $b = 7;
-    echo isset($a);
+    echo $a;
+    unset($a);
     echo '<br />';
-    echo isset($b);
-
-    $x = 15;
-    echo '<br />';
-    echo gettype($x);
-    $x = (double) $x;
-    echo '<br />';
-    echo gettype($x);
+    echo $b;
     echo '<br />';
 
-    $str = 'Hello';
-    echo 'Переменная str - это string? : ';
-    echo is_string($str);
+    /* Символические ссылки */
+    $a = 3;
+    $b = 'a';
+    echo $$b;
+    $$b = 10;
     echo '<br />';
+    echo $a;
 
-    echo ((int) $str);
-    echo '<br />';
-    $str_number = '12345';
-    echo ((int) $str_number);
-    echo '<br />';
-    echo gettype($str_number);
-    echo '<br />';
-    echo is_numeric($str_number);
-
-    echo '<br />';
-    echo isset($x);
-    echo '<br />';
-    unset($x);
-    echo isset($x);
 ?>
