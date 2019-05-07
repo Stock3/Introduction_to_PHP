@@ -1,14 +1,20 @@
 <?php
-    define('COLOR', '#c00');
-    echo COLOR;
-    echo '<br />';
-    echo defined('COLOR');
-
-    /* Встроенные константы в PHP */
-
-    echo '<br />';
-    echo __FILE__;
-    echo '<br />';
-    echo PHP_VERSION;
+    $x = 7;
+    $y = 10;
+    $z = $x + $y;
+    echo "x = $x; y = $y<br />";
+    echo "Сумма x и y равна $z";
+    echo "<br />Разность x и y равна ".($x - $y);
+    echo "<br />Произведение x и y равно ".($x * $y);
+    echo "<br />Результат деления x на y равен ".($x / $y);
+    echo "<br />Остаток от деления x на y равен ".($x % $y);
+    echo "<br />x в степени y равен ".($x ** $y);
+    echo "<br />Квадратный корень из x равен ".($x ** 0.5);
+    $x++;
+    $x = $x + 1;
+    echo "<br />x = $x";
+    $y--;
+    $y = $y - 1;
+    $y -= 3; // $y = $y - 3;
+    echo "<br />y = $y";
 ?>
-<p style="color: <?=COLOR?>;">Hello World!</p>
