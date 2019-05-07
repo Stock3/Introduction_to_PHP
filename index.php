@@ -1,23 +1,14 @@
 <?php
-    /* Жёсткие ссылки */
-    $a = 10;
-    $b =& $a;
-    $a = 5;
-    echo $b;
+    define('COLOR', '#c00');
+    echo COLOR;
     echo '<br />';
-    $b = 7;
-    echo $a;
-    unset($a);
-    echo '<br />';
-    echo $b;
-    echo '<br />';
+    echo defined('COLOR');
 
-    /* Символические ссылки */
-    $a = 3;
-    $b = 'a';
-    echo $$b;
-    $$b = 10;
-    echo '<br />';
-    echo $a;
+    /* Встроенные константы в PHP */
 
+    echo '<br />';
+    echo __FILE__;
+    echo '<br />';
+    echo PHP_VERSION;
 ?>
+<p style="color: <?=COLOR?>;">Hello World!</p>
